@@ -1,0 +1,17 @@
+.content{
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 5%;
+}
+table{
+    width: 100%;
+}
+table tr th{
+    background-color: aquamarine;
+}
+tr:nth-child(odd){
+    background-color: beige;
+}
+.button {
+    float: right;
+}
