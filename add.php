@@ -15,7 +15,7 @@
 <body>
     <div class="content">
         <h4>ADD USER</h4> <hr>
-        <form method="POST" autocomplete="off" action="index.php">
+        <form method="POST" autocomplete="off" action="">
             <table>
                 <tr>
                     <th><label for="name">name</label></th>
@@ -32,32 +32,10 @@
             </table>
             <div class="button">
                 <button type="submit" onclick="submitData('insert')">Insert</button>
+                <?php require 'script.html';?>
             </div>
         </form>
-        <a href="home.html"> Go to home/list</a>
+        <a href="home.php"> Go to home/list</a>
     </div>
 </body>
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script type="text/javascript">
-    function submitData(action){
-        $(document).ready(function(){
-            var data = {
-                action : action,
-                id: $('#id').val(),
-                name: $('#name').val(),
-                subject: $('#subject').val(),
-                message: $('#message').val(),
-            };
-            $.ajax({
-               url : 'index.php',
-               type: 'POST',
-               data: data,
-               success: function(response){
-                alert(response);
-               }
-
-            });
-        })
-    }
-</script>

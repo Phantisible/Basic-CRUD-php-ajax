@@ -1,0 +1,17 @@
+CREATE TABLE users (
+	id INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	subject VARCHAR (255),
+	name VARCHAR(255),
+	message VARCHAR (255)
+	
+);
+
+ALTER TABLE users 
+	ADD date TIMESTAMP DEFAULT now();
+
+INSERT INTO users (subject, name, message)
+	VALUES ('subject','name','message');
+UPDATE users 
+	SET subject = 'subject1', 
+		name ='name1';
+DELETE FROM users WHERE id =1;
